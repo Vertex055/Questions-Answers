@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="احصل على إجابات شرعية من الدكتور الشيخ فلاح كركلي، مستندة إلى القرآن والسنة.">
-  <title>AskSunnah.com - إجابات من الشيخ فلاح كركلي</title>
+  <meta name="description" content="احصل على إجابات شرعية من الدكتور الشيخ فلاح كركلي، مستندة من القرآن والسنة.">
+  <title>AskSunnah.com - إجابات من الشيخ فلاح كركولي</title>
   <style>
     :root {
       --primary-color: #1f6f3e;
@@ -225,16 +225,76 @@
         font-size: 0.85rem;
       }
     }
+    body.dark {
+  --background: #0f172a;
+  --card-bg: #1e293b;
+  --accent-bg: #334155;
+  --text-color: #f1f5f9;
+}
+
+
+
+body.dark .modal-content {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+body.dark .modal-content input,
+body.dark .modal-content textarea {
+  background-color: #334155;
+  color: #f1f5f9;
+  border: 1px solid #475569;
+}
+
+body.dark .modal-content button {
+  background-color: #22c55e;
+  color: #fff;
+}
+
+.dark-toggle-btn {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+body.dark .dark-toggle-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f1f5f9;
+}
+.question-item {
+  display: block;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-left: 5px solid var(--primary-color);
+  background-color: var(--accent-bg);
+  border-radius: 5px;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.2s;
+}
+
+.question-item:hover {
+  background-color: #e0f2f1;
+  cursor: pointer;
+}
+
   </style>
 </head>
 <body>
 
   <header>
     <h1>AskSunnah.com</h1>
-    <p>احصل على إجابات شرعية موثوقة من الشيخ الدكتور فلاح كركلي — مستندة إلى القرآن والسنة (نسخة تجريبية)</p>
+    <p>احصل على إجابات شرعية موثوقة من الشيخ الدكتور فلاح كركولي — مستندة من القرآن والسنة (نسخة تجريبية)</p>
+    <button class="dark-toggle-btn" id="toggleDarkMode">🌗 الوضع الليلي </button>
+
   </header>
 
-  <div style="display: flex; justify-content: center; gap: 1rem; margin: 1rem 0; flex-direction: row-reverse;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin: 1rem 0;">
     <a href="/library/Welcome_to_library_ar/Welcome_to_library_ar.html" class="btn" aria-label="زيارة المكتبة">
       📚 المكتبة
     </a>
@@ -248,7 +308,7 @@
   <main aria-label="الصفحة الرئيسية">
     <section aria-labelledby="ask-question">
       <h2 id="ask-question">أرسل سؤالك</h2>
-      <p>هل لديك سؤال عن الإسلام؟ أرسله الآن وستتلقى الرد من الشيخ فلاح كركلي وفق رأي موثوق من العلماء.</p>
+      <p>هل لديك سؤال عن الإسلام؟ أرسله الآن وستتلقى الرد من الشيخ فلاح كركولي وفق رأي موثوق من العلماء.</p>
       <a href="#" class="btn" id="openModalBtn" aria-label="أرسل سؤالك">أرسل سؤالك</a>
       <a href="/index.html" id="switchToEnglish" style="margin-right: 1rem; text-decoration: underline; color: inherit;">
         English
@@ -274,21 +334,27 @@
 
       <!-- All question-items listed here -->
       <div id="fatwaList">
-        <article class="question-item"><a href="answers_ar/is_zina_halal_ar.html"><strong>س1:</strong> هل الزنا حلال؟</a></article>
-        <article class="question-item"><a href="answers_ar/Ruling_on_receiving_gift_from_banks_ar.html"><strong>س2:</strong> استلام هدية عند فتح حساب بنكي من البنوك؟</a></article>
-        <article class="question-item"><a href="answers_ar/Singing_without_musical_instruments_ar.html"><strong>س3:</strong> الغناء بدون أدوات موسيقية؟</a></article>
-        <article class="question-item"><a href="answers_ar/Spaying_cat_ar.html"><strong>س4:</strong> هل يجوز لي تعقيم قطتي؟</a></article>
-        <article class="question-item"><a href="answers_ar/working_in_tax_collection_ar.html"><strong>س5:</strong> العمل في هيئات جمع الضرائب؟</a></article>
-        <article class="question-item"><a href="answers_ar/ruling_on_going_against_government_ar.html"><strong>س6:</strong> ما هو حكم الخروج على الحاكم؟</a></article>
-        <article class="question-item"><a href="answers_ar/money_refunded_ar.html"><strong>س7:</strong> حكم الاحتفاظ بالمال المسترد من البنك؟</a></article>
-        <article class="question-item"><a href="answers_ar/advise_family_ar.html"><strong>س8:</strong> كيف تنصح العائلة عند ارتكاب المعاصي؟</a></article>
-        <article class="question-item"><a href="answers_ar/combine_prayers_ar.html"><strong>س9:</strong> حكم جمع صلاتين بدون عذر؟</a></article>
-        <article class="question-item"><a href="answers_ar/dental_veeners_ar.html"><strong>س10:</strong> هل قشور الأسنان (الفينير) مباحة في الشريعة الإسلامية؟</a></article>
-        <article class="question-item"><a href="answers_ar/cursing_sahaba_ar.html"><strong>س11:</strong> حكم من يسب الصحابة رضي الله عنهم؟</a></article>
-        <article class="question-item"><a href="answers_ar/Listening_to_clean_songs_ar.html"><strong>س12:</strong> ما حكم الاستماع إلى الأغاني النظيفة ذات الكلمات الطيبة والموسيقى؟</a></article>
-        <article class="question-item"><a href="answers_ar/Can_i_accept_free_hajj_ar.html"><strong>س13:</strong> حكم الحج الممول من متبرع؟</a></article>
-        <article class="question-item"><a href="answers_ar/the_secret_habit_ar.html"><strong>س14:</strong> حكم الاستمناء: هل هو من الكبائر؟</a></article>
+<a href="answers_ar/is_zina_halal_ar.html" class="question-item"><strong>س1:</strong> هل الزنا حلال؟</a>
+<a href="answers_ar/Ruling_on_receiving_gift_from_banks_ar.html" class="question-item"><strong>س2:</strong> استلام هدية عند فتح حساب بنكي من البنوك؟</a>
+<a href="answers_ar/Singing_without_musical_instruments_ar.html" class="question-item"><strong>س3:</strong> الغناء بدون أدوات موسيقية؟</a>
+<a href="answers_ar/Spaying_cat_ar.html" class="question-item"><strong>س4:</strong> هل يجوز لي تعقيم قطتي؟</a>
+<a href="answers_ar/working_in_tax_collection_ar.html" class="question-item"><strong>س5:</strong> العمل في هيئات جمع الضرائب؟</a>
+<a href="answers_ar/ruling_on_going_against_government_ar.html" class="question-item"><strong>س6:</strong> ما هو حكم الخروج على الحاكم؟</a>
+<a href="answers_ar/money_refunded_ar.html" class="question-item"><strong>س7:</strong> حكم الاحتفاظ بالمال المسترد من البنك؟</a>
+<a href="answers_ar/advise_family_ar.html" class="question-item"><strong>س8:</strong> كيف تنصح العائلة عند ارتكاب المعاصي؟</a>
+<a href="answers_ar/combine_prayers_ar.html" class="question-item"><strong>س9:</strong> حكم جمع صلاتين بدون عذر؟</a>
+<a href="answers_ar/dental_veeners_ar.html" class="question-item"><strong>س10:</strong> هل قشور الأسنان (الفينير) مباحة في الشريعة الإسلامية؟</a>
+<a href="answers_ar/cursing_sahaba_ar.html" class="question-item"><strong>س11:</strong> حكم من يسب الصحابة رضي الله عنهم؟</a>
+<a href="answers_ar/Listening_to_clean_songs_ar.html" class="question-item"><strong>س12:</strong> ما حكم الاستماع إلى الأغاني النظيفة ذات الكلمات الطيبة والموسيقى؟</a>
+<a href="answers_ar/Can_i_accept_free_hajj_ar.html" class="question-item"><strong>س13:</strong> حكم الحج الممول من متبرع؟</a>
+<a href="answers_ar/the_secret_habit_ar.html" class="question-item"><strong>س14:</strong> حكم الاستمناء: هل هو من الكبائر؟</a>
+<a href="answers_ar/garment_below_ankle_ar.html" class="question-item"><strong>س15:</strong> حكم إسبال الثوب أسفل الكعبين</a>
+<a href="answers_ar/shaving_neck_hair_ar.html" class="question-item"><strong>س16:</strong> حكم حلاقة شعر الرقبة</a>
 
+
+
+
+<!-- Add more question-items here if needed -->
       </div>
 
       <!-- Pagination block -->
@@ -562,6 +628,11 @@
       filter: drop-shadow(0 0 5px white);
     }
   </style>
+<script>
+  document.getElementById('toggleDarkMode').addEventListener('click', function () {
+    document.body.classList.toggle('dark');
+  });
+</script>
 
 </body>
 </html>

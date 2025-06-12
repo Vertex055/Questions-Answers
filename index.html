@@ -144,6 +144,8 @@
       cursor: pointer;
     }
 
+    
+
     @media (max-width: 768px) {
       header h1 {
         font-size: 1.8rem;
@@ -205,9 +207,75 @@
 
       footer a {
         font-size: 0.85rem;
-      }
+      }   
+
+      
 
     }
+
+    body.dark {
+  --background: #0f172a;
+  --card-bg: #1e293b;
+  --accent-bg: #334155;
+  --text-color: #f1f5f9;
+}
+
+
+
+
+body.dark .modal-content input,
+body.dark .modal-content textarea {
+  background-color: #334155;
+  color: #f1f5f9;
+  border: 1px solid #475569;
+}
+
+body.dark .modal-content button {
+  background-color: #22c55e;
+  color: #fff;
+}
+
+.dark-toggle-btn {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+body.dark .dark-toggle-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f1f5f9;
+}
+.question-item {
+  display: block;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-left: 5px solid var(--primary-color);
+  background-color: var(--accent-bg);
+  border-radius: 5px;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.2s;
+}
+
+.question-item:hover {
+  background-color: #e0f2f1;
+  cursor: pointer;
+}
+
+
+
+body.dark header {
+  background-color: var(--primary-color) !important;
+}
+
+body.dark header {
+  background-color: var(--primary-color) !important;
+}
   </style>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4S7C7010H4"></script>
@@ -230,9 +298,12 @@
   <header>
     <h1>AskSunnah.com</h1>
     <p>Get authentic answers from Dr. Sheikh Falah Kurkully — grounded in Qur’an and Sunnah (Beta-Version)</p>
+    <button class="dark-toggle-btn" id="toggleDarkMode">🌗 Dark Mode</button>
+
   </header>
 
-  <div style="display: flex; justify-content: center; gap: 1rem; margin: 1rem 0;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin: 1rem 0;">
+
     <a href="library/Welcome_to_library/Welcome_to_library.html" class="btn" aria-label="Visit the Library">📚 Library</a>
     <a href="https://www.paypal.me/asksunnah" class="btn" aria-label="Donate to support the deen">❤️ Help support the Deen</a>
     <a href="https://forms.gle/e5jGuDBJhZAyCP448" class="btn" aria-label="Share your thoughts" target="_blank" rel="noopener">💬 Share your Thoughts</a>
@@ -261,20 +332,37 @@
       
       <!-- All question-items listed here -->
       <div id="fatwaList">
-        <article class="question-item"><a href="answers/is_zinah_halal.html"><strong>Q1:</strong> Is Zinah (fornication) Halal?</a></article>
-        <article class="question-item"><a href="answers/Ruling_on_receiving_gift_from_banks.html"><strong>Q2:</strong> Receiving an opening bank account gift from banks?</a></article>
-        <article class="question-item"><a href="answers/Singing_without_musical_instruments.html"><strong>Q3:</strong> Singing without musical instruments?</a></article>
-        <article class="question-item"><a href="answers/Spaying_cat.html"><strong>Q4:</strong> Can I spay/neuter my cat?</a></article>
-        <article class="question-item"><a href="answers/working_in_tax_collection.html"><strong>Q5:</strong> Working in tax collection authorities?</a></article>
-        <article class="question-item"><a href="answers/ruling_on_going_against_government.html"><strong>Q6:</strong> Ruling on going against government?</a></article>
-        <article class="question-item"><a href="answers/money_refunded.html"><strong>Q7:</strong> Ruling on keeping refunded money from the bank?</a></article>
-        <article class="question-item"><a href="answers/advise_family.html"><strong>Q8:</strong> How to advise family on sinning?</a></article>
-        <article class="question-item"><a href="answers/combine_prayers.html"><strong>Q9:</strong> Ruling on combining prayers without a reason?</a></article>
-        <article class="question-item"><a href="answers/dental_veeners.html"><strong>Q10:</strong> Are dental veneers permissible in islam?</a></article>
-        <article class="question-item"><a href="answers/cursing_sahaba.html"><strong>Q11:</strong> Ruling on the one who curses Sahaba?</a></article>
-        <article class="question-item"><a href="answers/Listening_to_clean_songs.html"><strong>Q12:</strong> Ruling on Listening to clean songs that include music?</a></article>
-        <article class="question-item"><a href="answers/Can_i_accept_free_hajj.html"><strong>Q13:</strong> Can I accept free hajj?</a></article>
-        <article class="question-item"><a href="answers/the_secret_habit.html"><strong>Q14:</strong> Is masturbation haram?</a></article>
+
+         <a href="answers/is_zinah_halal.html" class="question-item"> <strong>Q1:</strong> Is Zinah (fornication) Halal? </a>
+  <a href="answers/Ruling_on_receiving_gift_from_banks.html" class = "question-item"> <strong>Q2:</strong> Receiving an opening bank account gift from banks? </a>
+  <a href="answers/Singing_without_musical_instruments.html" class="question-item"><strong>Q3:</strong> Singing without musical instruments?</a>
+<a href="answers/Spaying_cat.html" class="question-item"> <strong>Q4:</strong> Can I spay/neuter my cat?</a>
+<a href="answers/working_in_tax_collection.html" class="question-item"> <strong>Q5:</strong> Working in tax collection authorities?</a>
+
+        <a href="answers/is_zinah_halal.html" class="question-item"> <strong>Q1:</strong> Is Zinah (fornication) Halal? </a>
+        <a href="answers/Ruling_on_receiving_gift_from_banks.html" class = "question-item"> <strong>Q2:</strong> Receiving an opening bank account gift from banks? </a>
+       <a href="answers/Singing_without_musical_instruments.html" class="question-item">
+  <strong>Q3:</strong> Singing without musical instruments?
+</a>
+
+<a href="answers/Spaying_cat.html" class="question-item"> <strong>Q4:</strong> Can I spay/neuter my cat?</a>
+<a href="answers/working_in_tax_collection.html" class="question-item"> <strong>Q5:</strong> Working in tax collection authorities?
+</a>
+
+<a href="answers/ruling_on_going_against_government.html" class="question-item"> <strong>Q6:</strong> Ruling on going against government?</a>
+<a href="answers/money_refunded.html" class="question-item"><strong>Q7:</strong> Ruling on keeping refunded money from the bank?</a>
+<a href="answers/advise_family.html" class="question-item"><strong>Q8:</strong> How to advise family on sinning?</a>
+<a href="answers/combine_prayers.html" class="question-item"><strong>Q9:</strong> Ruling on combining prayers without a reason?</a>
+<a href="answers/dental_veeners.html" class="question-item"> <strong>Q10:</strong> Are dental veneers permissible in Islam?</a>
+<a href="answers/cursing_sahaba.html" class="question-item"> <strong>Q11:</strong> Ruling on the one who curses Sahaba?</a>
+<a href="answers/Listening_to_clean_songs.html" class="question-item"><strong>Q12:</strong> Ruling on listening to clean songs that include music?</a>
+<a href="answers/Can_i_accept_free_hajj.html" class="question-item"><strong>Q13:</strong> Can I accept free hajj?</a>
+<a href="answers/the_secret_habit.html" class="question-item"><strong>Q14:</strong> Is masturbation haram?</a>
+<a href="answers/garment_below_ankle.html" class="question-item"><strong>Q15:</strong> Ruling on garment below the ankle</a>
+<a href="answers/shaving_neck_hair.html" class="question-item"><strong>Q16:</strong> Ruling on shaving the neck hair</a>
+
+
+  
         <!-- Add more question-items here if needed -->
       </div>
 
@@ -456,7 +544,7 @@
     margin-top: 3rem;
   ">
 
-    <h4 style="margin-bottom: 1rem;">Connect With Us</h4>
+    <h4 style="margin-bottom: 1rem;">Connect With Us!</h4>
 
     <!-- Social Icons -->
     <div style="
@@ -529,6 +617,11 @@
     }
 
   </style>
+<script>
+  document.getElementById('toggleDarkMode').addEventListener('click', function () {
+    document.body.classList.toggle('dark');
+  });
+</script>
 
 </body>
 </html>
